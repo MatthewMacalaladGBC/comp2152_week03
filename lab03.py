@@ -38,3 +38,18 @@ for j in range(1, 21, 2):
     print(f"\n Round {j}: Hero rolled {heroRoll}, Monster rolled {monsterRoll}.")
     print(f"Hero selected: {heroWeapon}, Monster selected {monsterWeapon}.")
     print(f"Hero total strength: {heroTotal}, Monster total strength: {monsterTotal}.")
+
+    # Determine winner
+    if heroTotal > monsterTotal:
+        print("Hero wins the round!")
+    elif heroTotal < monsterTotal:
+        print("Monster wins the round!")
+    else:
+        print("It's a tie!")
+
+    if j == 11:
+        print("\nBattle truce declared in round 11. Game Over!")
+        break
+
+if j != 11:
+        print("\n Battle concluded after 20 rounds.")
