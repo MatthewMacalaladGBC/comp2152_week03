@@ -5,9 +5,15 @@ diceOptions = list(range(1, 7))
 
 # Weapons array
 weapons = ['Fist', 'Knife', 'Club', 'Gun', 'Bomb', 'Nuclear Bomb']
+
 print("Available Weapons:", ', '.join(weapons))
 
-# Inputs
+# Input combat strength
+combatStrength = int(input("Enter your combat strength (1-6): "))
+if combatStrength < 1 or combatStrength > 6:
+    print("Invalid input! Combat strength should be between 1 and 6.")
+    combatStrength = 1 # Default value for invalid combatStrength input
+
 combatStrength = max(1, min(6, int(input("Hero strength (1-6): "))))
 mCombatStrength = max(1, min(6, int(input("Monster strength (1-6): "))))
 
